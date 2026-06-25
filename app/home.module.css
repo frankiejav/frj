@@ -1,0 +1,82 @@
+.home {
+  text-align: center;
+}
+
+.name {
+  font-size: clamp(3rem, 8vw, 5rem);
+  margin-bottom: var(--spacing-lg);
+}
+
+.contacts {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  display: inline-block;
+  text-align: left;
+  width: auto;
+  max-width: min(100%, calc(64ch + 5.5em));
+}
+
+.contacts li {
+  display: flex;
+  align-items: baseline;
+  gap: 1em;
+  padding: 0.6em 0;
+  border-bottom: 1px solid var(--border-color);
+  margin: 0;
+}
+
+.pgpRow {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.25em;
+}
+
+.label {
+  flex: 0 0 4.5em;
+  font-family: var(--font-mono);
+  font-size: 0.85em;
+  color: var(--text-muted);
+}
+
+.pgpRow .label {
+  flex: none;
+}
+
+.contactLink {
+  color: var(--text-primary);
+}
+
+.contactLink:visited,
+.contactLink:hover {
+  color: var(--text-primary);
+}
+
+.placeholder {
+  font-family: var(--font-mono);
+  font-size: 0.85em;
+  color: var(--text-muted);
+  font-style: italic;
+}
+
+.pgpScroll {
+  overflow-x: auto;
+  max-width: 100%;
+  margin-top: 0.25em;
+  -webkit-overflow-scrolling: touch;
+}
+
+.pgpKey {
+  font-family: var(--font-mono);
+  font-size: clamp(0.625rem, calc((100vw - 3rem) / 64), 0.8125rem);
+  color: var(--text-primary);
+  font-style: normal;
+  white-space: pre;
+  text-align: left;
+  margin: 0;
+  padding: 0;
+  line-height: 1.45;
+  background: none;
+  border: none;
+  width: max-content;
+}

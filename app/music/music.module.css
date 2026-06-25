@@ -1,0 +1,7 @@
+.intro {
+  margin-bottom: var(--spacing-lg);
+}
+
+.intro h1 {
+  margin-bottom: 0;
+}

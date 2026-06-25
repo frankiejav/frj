@@ -1,0 +1,162 @@
+.terminal {
+  background: transparent;
+  overflow: hidden;
+  font-family: "SF Mono", "Fira Code", "Consolas", "Monaco", "Liberation Mono", monospace;
+  font-size: clamp(10px, 1.5vw, 12px);
+  width: 100%;
+  height: 100%;
+}
+
+.body {
+  padding: 0;
+  height: 100%;
+  min-height: 280px;
+  max-height: 420px;
+  overflow: hidden;
+  background: transparent;
+}
+
+.lines {
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+.terminal,
+.api {
+  font-size: clamp(10px, 1.5vw, 12px);
+}
+
+.filetree {
+  font-size: clamp(10px, 1.5vw, 13px);
+}
+
+.terminal .lines,
+.api .lines {
+  white-space: pre-wrap;
+  word-break: break-all;
+}
+
+.filetree .lines {
+  white-space: pre;
+  line-height: 1.65;
+}
+
+.filetree .body {
+  min-height: 320px;
+  max-height: 480px;
+}
+
+.api .body {
+  min-height: 320px;
+  max-height: 480px;
+}
+
+.lines :global(.prompt) {
+  color: var(--accent);
+}
+.lines :global(.command) {
+  color: var(--text-primary);
+}
+.lines :global(.info) {
+  color: var(--text-secondary);
+}
+.lines :global(.success) {
+  color: var(--accent);
+}
+.lines :global(.muted) {
+  color: var(--text-muted);
+}
+.lines :global(.highlight) {
+  color: var(--accent);
+}
+.lines :global(.dim) {
+  color: var(--text-muted);
+  opacity: 0.6;
+}
+.lines :global(.dir) {
+  color: var(--text-primary);
+}
+.lines :global(.arrow) {
+  color: var(--text-muted);
+  opacity: 0.6;
+}
+.lines :global(.size) {
+  color: var(--text-muted);
+  opacity: 0.45;
+}
+.lines :global(.file) {
+  color: var(--text-secondary);
+  opacity: 0.8;
+}
+.lines :global(.indent) {
+  color: var(--text-muted);
+  opacity: 0.25;
+}
+.lines :global(.url),
+.lines :global(.header),
+.lines :global(.string),
+.lines :global(.number) {
+  color: var(--text-secondary);
+}
+.lines :global(.key) {
+  color: var(--accent);
+}
+.lines :global(.null) {
+  color: var(--text-muted);
+  opacity: 0.7;
+}
+.lines :global(.bracket) {
+  color: var(--text-muted);
+}
+.lines :global(.status) {
+  color: var(--accent);
+}
+
+.canvasWrap {
+  width: 100%;
+  height: 100%;
+  min-height: 320px;
+  max-height: 480px;
+  overflow: hidden;
+  position: relative;
+}
+
+.canvasWrap canvas {
+  position: absolute;
+  inset: 0;
+  display: block;
+}
+
+@media (max-width: 1200px) {
+  .terminal,
+  .api {
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 960px) {
+  .terminal,
+  .api {
+    font-size: 10px;
+  }
+
+  .filetree {
+    font-size: 11px;
+  }
+
+  .body {
+    min-height: 240px;
+    max-height: 320px;
+  }
+
+  .filetree .body,
+  .api .body {
+    min-height: 260px;
+    max-height: 380px;
+  }
+
+  .canvasWrap {
+    min-height: 260px;
+    max-height: 380px;
+  }
+}

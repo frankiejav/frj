@@ -1,0 +1,106 @@
+.hero {
+  position: relative;
+  min-height: clamp(280px, 45vh, 420px);
+  display: flex;
+  align-items: flex-start;
+}
+
+.heroBackground {
+  position: absolute;
+  top: 0;
+  right: -2em;
+  width: 60%;
+  height: 100%;
+  opacity: 0.3;
+  pointer-events: none;
+  mask-image: linear-gradient(to left, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0, 0) 85%);
+  -webkit-mask-image: linear-gradient(to left, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0, 0) 85%);
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+  max-width: min(680px, 100%);
+  padding: var(--spacing-md);
+  margin: calc(-1 * var(--spacing-md));
+  background: linear-gradient(to right, var(--bg-primary) 0%, var(--bg-primary) 65%, transparent 100%);
+}
+
+.content h1 {
+  margin-bottom: 0.5em;
+}
+
+.bio {
+  max-width: 60ch;
+  margin-bottom: var(--spacing-md);
+}
+
+.bio p {
+  color: var(--text-secondary);
+  line-height: 1.8;
+  font-size: clamp(0.95em, 2.5vw, 1em);
+}
+
+.content h2 {
+  margin-top: var(--spacing-lg);
+  margin-bottom: 0.75em;
+  font-size: clamp(1.75rem, 4vw, 2.25rem);
+}
+
+.linkList {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 var(--spacing-md) 0;
+}
+
+.linkList li {
+  margin-bottom: 0.75em;
+  color: var(--text-secondary);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4em;
+}
+
+.label {
+  color: var(--text-muted);
+}
+
+.linkList a {
+  color: var(--accent);
+  word-break: break-all;
+}
+
+@media (max-width: 960px) {
+  .heroBackground {
+    width: 55%;
+    right: -1em;
+  }
+}
+
+@media (max-width: 720px) {
+  .hero {
+    min-height: auto;
+  }
+
+  .heroBackground {
+    right: -1em;
+    width: 70%;
+    opacity: 0.25;
+    mask-image: linear-gradient(to left, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.5) 40%, rgba(0, 0, 0, 0) 80%);
+    -webkit-mask-image: linear-gradient(to left, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.5) 40%, rgba(0, 0, 0, 0) 80%);
+  }
+
+  .content {
+    max-width: 100%;
+    background: linear-gradient(to right, var(--bg-primary) 0%, var(--bg-primary) 50%, transparent 100%);
+    padding: var(--spacing-sm);
+    margin: calc(-1 * var(--spacing-sm));
+  }
+}
+
+@media (max-width: 480px) {
+  .linkList li {
+    flex-direction: column;
+    gap: 0.125em;
+  }
+}
