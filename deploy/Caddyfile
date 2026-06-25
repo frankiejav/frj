@@ -1,0 +1,8 @@
+t1566.com, www.t1566.com {
+	encode zstd gzip
+
+	@www host www.t1566.com
+	redir @www https://t1566.com{uri} permanent
+
+	reverse_proxy host.docker.internal:3000
+}

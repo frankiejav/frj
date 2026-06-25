@@ -16,10 +16,6 @@ export default function BlogIndex() {
     <main className="wide">
       <header className={styles.intro}>
         <h1>Blog</h1>
-        <p>
-          Long-form teardowns and notes. Mostly information security and threat
-          intelligence, written when something is worth writing down.
-        </p>
       </header>
 
       <section>

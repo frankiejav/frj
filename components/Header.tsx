@@ -11,8 +11,8 @@ export function Header() {
           <Link href="/">{SITE_TITLE}</Link>
         </h2>
         <div className={styles.actions}>
-          <Link href="/music" className={styles.navLink}>
-            [music]
+          <Link href="/blog" className={styles.navLink}>
+            [blog]
           </Link>
           <ThemeToggle />
         </div>

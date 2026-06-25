@@ -8,6 +8,12 @@ export function Footer() {
       <div className={styles.content}>
         <p className={styles.divider}>* * *</p>
         <p>&copy; {year} {SITE_NAME}</p>
+        <p className={styles.hosted}>
+          Self-hosted on a VPS running{" "}
+          <a href="https://www.debian.org/" target="_blank" rel="noreferrer">
+            Debian
+          </a>
+        </p>
       </div>
     </footer>
   );

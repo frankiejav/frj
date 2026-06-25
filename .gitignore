@@ -44,6 +44,3 @@ next-env.d.ts
 # velite (generated content layer + processed assets)
 /.velite
 /public/static
-
-# music album art cache
-/music/.covers-cache.json

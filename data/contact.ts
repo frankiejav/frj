@@ -10,8 +10,8 @@ export interface ContactItem {
 export const contacts: ContactItem[] = [
   {
     label: "Email:",
-    href: "mailto:contact@frjgarcia.com",
-    value: "contact@frjgarcia.com",
+    href: "mailto:f@frjgarcia.com",
+    value: "f@frjgarcia.com",
   },
   {
     label: "Signal:",
@@ -23,16 +23,16 @@ export const contacts: ContactItem[] = [
     label: "PGP:",
     placeholder: `-----BEGIN PGP PUBLIC KEY BLOCK-----
 
-mDMEajy7xhYJKwYBBAHaRw8BAQdA5sBr8KkeqRZ+b6y/nD1xsd9wgXVi43oh9g2e
-rK3mE6a0A2ZyaoiWBBMWCgA+FiEE7tHQNrIJeWfyHhsgLltlHc46uwgFAmo8u8YC
-GwMFCQWljsoFCwkIBwIGFQoJCAsCBBYCAwECHgECF4AACgkQLltlHc46uwjehAEA
-4zKO/VMMhG7qnnT7CT0o18U7mgh913T+TDrzXnq3CjoBALXHLBXYqt3fHa9yhVzP
-fV2OxV8AUALMdV/3xLTS4HgBuDgEajy7xhIKKwYBBAGXVQEFAQEHQEWZq1sWNNiG
-xRPd7LrdOQcLFc3jyXfb0BKSYMNsCMIcAwEIB4h+BBgWCgAmFiEE7tHQNrIJeWfy
-HhsgLltlHc46uwgFAmo8u8YCGwwFCQWljsoACgkQLltlHc46uwgWKwD/YohkEmbJ
-tsbZ1xqZCRwjuIQnSRC3RVCCFGWz8Kpb16ABAIMj4NOpwVD0dYl3wqxVTF87aifU
-JAICeZXdTgQFWskK
-=aUr6
+mDMEaj1uMRYJKwYBBAHaRw8BAQdA74LzNK+TMS8kzCcbSQaXh7ihFRs0HIhg3w17
+UfmVh7+0FWZyaiA8ZkBmcmpnYXJjaWEuY29tPoiWBBMWCgA+FiEEQ/ugwiXuKjQy
+0hTgrl4m/D1VqHEFAmo9bjECGwMFCQWk3F8FCwkIBwIGFQoJCAsCBBYCAwECHgEC
+F4AACgkQrl4m/D1VqHFHTgEAw+XYtMS16PhXYypiYDSMC6f6aSJfcmSUWRPxx7YD
+69IA/3MDL6MM2gBg9w0YGMxVlqEpeWQep2nK0g0Ydn5t6jgHuDgEaj1uMRIKKwYB
+BAGXVQEFAQEHQKBm6Mg0sRVojZgjCWAXdRA+7Lm5hUiLcGPNQ0kCllwaAwEIB4h+
+BBgWCgAmFiEEQ/ugwiXuKjQy0hTgrl4m/D1VqHEFAmo9bjECGwwFCQWk3F8ACgkQ
+rl4m/D1VqHE46gD+LGrNwFCZWXxZhDunnxAdRdUNUA7fuS76krl5LAx18JQA/11R
+fyaddmz0+pKQixHfGgPq4XS+Z2tQ0Uz6+eGxwdIM
+=7VbC
 -----END PGP PUBLIC KEY BLOCK-----`,
     preformatted: true,
   },

@@ -27,6 +27,13 @@
   font-family: var(--font-body);
 }
 
+.hosted {
+  margin-top: 0.65em !important;
+  font-family: var(--font-mono);
+  font-size: 0.72em !important;
+  letter-spacing: 0.02em;
+}
+
 .footer a,
 .footer a:visited {
   color: var(--text-muted);
