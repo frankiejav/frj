@@ -83,26 +83,32 @@ npm run build        # runs Velite then builds the standalone server
 
 ## Deploy (VPS)
 
-The app builds to a standalone server and is served behind Caddy, which handles
-TLS automatically via Let's Encrypt.
+Production runs a **split stack**: Next.js standalone via systemd on port 3000,
+Caddy in Docker for TLS and reverse proxy. See [`deploy/`](deploy/) for unit
+file, Caddyfile, and compose config.
 
 1. Point `frjgarcia.com` (and `www`) DNS A/AAAA records at the VPS.
-2. On the server, install Docker + the Compose plugin.
-3. Clone the repo, then:
+2. Install Docker, Node 22 (nvm), and enable user lingering for the deploy user.
+3. Create `~/frjgarcia.com/.env` from [`.env.example`](.env.example) (never commit
+   this file).
+4. Install the systemd unit from [`deploy/frjgarcia.service`](deploy/frjgarcia.service)
+   to `~/.config/systemd/user/frjgarcia.service`, then
+   `systemctl --user enable --now frjgarcia`.
+5. Start Caddy: `bash deploy/setup-https.sh` from the deploy directory on the server.
 
-   ```bash
-   cp .env.example .env   # set NEXT_PUBLIC_SITE_URL and any API keys
-   docker compose up -d --build
-   ```
+### CI/CD
 
-Caddy provisions certificates on first boot and proxies traffic to the Next.js
-container. To deploy updates, pull and rebuild:
+Pushes to `main` trigger a Gitea Actions workflow (`.gitea/workflows/deploy.yml`)
+that builds on the prod runner and runs [`deploy/sync-and-restart.sh`](deploy/sync-and-restart.sh).
 
-```bash
-git pull && docker compose up -d --build
-```
+- **Automatic deploy** — push to `main`
+- **Manual deploy** — Gitea → Actions → Deploy → Run workflow
+- **PR checks** — `.gitea/workflows/ci.yml` runs `npm run build` on pull requests
 
-### Running without Docker
+The live app directory on prod is `/home/nairobi/frjgarcia.com`. Environment
+variables live in `/home/nairobi/frjgarcia.com/.env` on the server only.
+
+### Running without Docker (local)
 
 ```bash
 npm run build
@@ -110,4 +116,4 @@ node .next/standalone/server.js   # serves on PORT (default 3000)
 ```
 
 Make sure `public/` and `.next/static/` sit next to the standalone server (the
-Dockerfile handles this copy automatically).
+Dockerfile and deploy script handle this copy automatically).

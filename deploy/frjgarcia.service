@@ -1,0 +1,15 @@
+[Unit]
+Description=frjgarcia.com Next.js app
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+WorkingDirectory=%h/frjgarcia.com
+EnvironmentFile=%h/frjgarcia.com/.env
+ExecStart=%h/.nvm/versions/node/v22.23.1/bin/node server.js
+Restart=on-failure
+RestartSec=5
+
+[Install]
+WantedBy=default.target
