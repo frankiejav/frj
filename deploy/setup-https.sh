@@ -10,9 +10,9 @@ if ! command -v docker >/dev/null; then
   exit 0
 fi
 
-if ! systemctl --user is-active t1566.service >/dev/null 2>&1; then
-  echo "Warning: t1566.service is not running. Start it first:"
-  echo "  systemctl --user start t1566"
+if ! systemctl --user is-active frjgarcia.service >/dev/null 2>&1; then
+  echo "Warning: frjgarcia.service is not running. Start it first:"
+  echo "  systemctl --user start frjgarcia"
 fi
 
 docker compose up -d

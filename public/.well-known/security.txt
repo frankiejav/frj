@@ -1,3 +1,3 @@
 Contact: mailto:contact@frjgarcia.com
 Preferred-Languages: en
-Canonical: https://t1566.com/.well-known/security.txt
+Canonical: https://frjgarcia.com/.well-known/security.txt

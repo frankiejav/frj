@@ -3,7 +3,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    image: t1566-site
+    image: frjgarcia-site
     restart: unless-stopped
     expose:
       - "3000"

@@ -1,7 +1,6 @@
-# t1566.com
+# frjgarcia.com
 
-Pseudonymous personal site (handle: nairobi) — part security notebook, part
-scrapbook. Built with Next.js and self-hosted on a VPS.
+personal website
 
 ## Stack
 
@@ -87,7 +86,7 @@ npm run build        # runs Velite then builds the standalone server
 The app builds to a standalone server and is served behind Caddy, which handles
 TLS automatically via Let's Encrypt.
 
-1. Point `t1566.com` (and `www`) DNS A/AAAA records at the VPS.
+1. Point `frjgarcia.com` (and `www`) DNS A/AAAA records at the VPS.
 2. On the server, install Docker + the Compose plugin.
 3. Clone the repo, then:
 

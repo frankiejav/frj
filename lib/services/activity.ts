@@ -12,7 +12,7 @@ const SAMPLE_ACTIVITY: Activity[] = [
   {
     id: "sample-2",
     kind: "commit",
-    title: "Pushed to t1566/site",
+    title: "Pushed to frjgarcia/site",
     detail: "port site from Astro to Next.js",
     at: "2026-06-24T18:00:00Z",
   },

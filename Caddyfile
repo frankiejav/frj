@@ -1,9 +1,9 @@
-t1566.com, www.t1566.com {
+frjgarcia.com, www.frjgarcia.com {
 	encode zstd gzip
 
 	# Redirect www to the apex domain
-	@www host www.t1566.com
-	redir @www https://t1566.com{uri} permanent
+	@www host www.frjgarcia.com
+	redir @www https://frjgarcia.com{uri} permanent
 
 	reverse_proxy app:3000
 }

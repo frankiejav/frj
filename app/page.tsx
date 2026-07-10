@@ -4,7 +4,7 @@ import styles from "./home.module.css";
 export default function Home() {
   return (
     <main className={styles.home}>
-      <h1 className={styles.name}>frankie</h1>
+      <h1 className={styles.name}>Francisco "Frankie" Garcia</h1>
 
       <ul className={styles.contacts}>
         {contacts.map((item) => (
