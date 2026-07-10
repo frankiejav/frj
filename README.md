@@ -1,6 +1,6 @@
 # frjgarcia.com
 
-personal website
+Personal Website
 
 ## Stack
 

@@ -1,11 +1,10 @@
 ---
 title: "Self-Hosting My Music Library with Navidrome"
-description: "How I run Navidrome on a headless Dell laptop, migrated Spotify playlists via Soulseek, and access the library remotely over Tailscale."
+description: "How I run Navidrome on a bare Dell laptop motherboard, migrated Spotify playlists via Soulseek, and access my library remotely over Tailscale."
 pubDate: 2026-06-26
-animation: "terminal"
 ---
 
-Today I'm walking through how I self-host my music library and migrated my spotify playlists into my own navidrome instance. This covers the full stack: server setup, Docker deployment, playlist migration, and remote access over tailscale.
+In this blog post I'm walking through how I self-host my music library and migrated my spotify playlists into my own navidrome instance. This covers the full stack: server setup, docker deployment, spotify playlist migration, and remote access over tailscale.
 
 ## Hardware and Cost
 

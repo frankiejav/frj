@@ -20,7 +20,6 @@ export default defineConfig({
           pubDate: s.isodate(),
           updatedDate: s.isodate().optional(),
           heroImage: s.string().optional(),
-          animation: s.enum(["terminal", "filetree", "phishing-redirect", "websocket-skim"]).optional(),
           draft: s.boolean().default(false),
           slug: s.path(),
           body: s.markdown(),
