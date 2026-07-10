@@ -15,7 +15,7 @@ export const contacts: ContactItem[] = [
   },
   {
     label: "Signal:",
-    href: "https://signal.me/#eu/QFeFrAtN6OODyzu5JjkVkqJ6IwSXTz7Wxg6ZvBBgYXRJpd_43ulJqZjsPm0STwAc",
+    href: "https://signal.me/#eu/mM7laZYAJKnoXLDts5ATiZCnk9ViSXy_iMLo2UCdbFDE-mHuj-RFWa1OiUgkPljC",
     value: "signal.me/…",
     external: true,
   },
