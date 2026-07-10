@@ -19,7 +19,7 @@ cp -a "$WORKSPACE/.next/standalone/." "$DEPLOY_DIR/"
 cp -a "$WORKSPACE/public/." "$DEPLOY_DIR/public/"
 cp -a "$WORKSPACE/.next/static/." "$DEPLOY_DIR/.next/static/"
 
-if [[ -f "$ENV_FILE" ]]; then
+if [[ -f "$ENV_FILE" && "$ENV_FILE" != "$DEPLOY_DIR/.env" ]]; then
   cp "$ENV_FILE" "$DEPLOY_DIR/.env"
 fi
 
