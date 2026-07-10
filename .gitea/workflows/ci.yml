@@ -9,8 +9,7 @@ jobs:
     runs-on: prod
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
-        with:
-          node-version: "22"
-      - run: npm ci
-      - run: npm run build
+      - run: |
+          export PATH="$HOME/.nvm/versions/node/v22.23.1/bin:$PATH"
+          npm ci
+          npm run build

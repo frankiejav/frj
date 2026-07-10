@@ -10,9 +10,6 @@ jobs:
     runs-on: prod
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
-        with:
-          node-version: "22"
       - run: bash deploy/sync-and-restart.sh
         env:
           DEPLOY_DIR: /home/nairobi/frjgarcia.com

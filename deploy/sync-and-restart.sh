@@ -15,16 +15,16 @@ npm ci
 npm run build
 
 mkdir -p "$DEPLOY_DIR/.next/static"
-rsync -a --delete "$WORKSPACE/.next/standalone/" "$DEPLOY_DIR/"
-rsync -a --delete "$WORKSPACE/public/" "$DEPLOY_DIR/public/"
-rsync -a --delete "$WORKSPACE/.next/static/" "$DEPLOY_DIR/.next/static/"
+cp -a "$WORKSPACE/.next/standalone/." "$DEPLOY_DIR/"
+cp -a "$WORKSPACE/public/." "$DEPLOY_DIR/public/"
+cp -a "$WORKSPACE/.next/static/." "$DEPLOY_DIR/.next/static/"
 
 if [[ -f "$ENV_FILE" ]]; then
   cp "$ENV_FILE" "$DEPLOY_DIR/.env"
 fi
 
 mkdir -p "$DEPLOY_COMPOSE_DIR"
-rsync -a "$WORKSPACE/deploy/Caddyfile" "$WORKSPACE/deploy/docker-compose.yml" "$WORKSPACE/deploy/setup-https.sh" "$DEPLOY_COMPOSE_DIR/"
+cp "$WORKSPACE/deploy/Caddyfile" "$WORKSPACE/deploy/docker-compose.yml" "$WORKSPACE/deploy/setup-https.sh" "$DEPLOY_COMPOSE_DIR/"
 
 systemctl --user restart frjgarcia.service
 
