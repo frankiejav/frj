@@ -6,7 +6,7 @@ export default function Home() {
     <main className={styles.home}>
       <h1 className={styles.name}>Francisco "Frankie" Garcia</h1>
       <p className={styles.tagline}>
-        IT student with hands-on experience in cybersecurity, linux systems,
+        IT student with hands-on experience in information security, windows/linux systems,
         and self-hosted infrastructure
       </p>
 
