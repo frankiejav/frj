@@ -5,13 +5,15 @@ export interface ContactItem {
   placeholder?: string;
   external?: boolean;
   preformatted?: boolean;
+  downloadHref?: string;
+  downloadLabel?: string;
 }
 
 export const contacts: ContactItem[] = [
   {
     label: "Email:",
-    href: "mailto:f@frjgarcia.com",
-    value: "f@frjgarcia.com",
+    href: "mailto:contact@frjgarcia.com",
+    value: "contact@frjgarcia.com",
   },
   {
     label: "Signal:",
@@ -35,5 +37,7 @@ fyaddmz0+pKQixHfGgPq4XS+Z2tQ0Uz6+eGxwdIM
 =7VbC
 -----END PGP PUBLIC KEY BLOCK-----`,
     preformatted: true,
+    downloadHref: "/frj_0xAE5E26FC3D55A871_public.asc",
+    downloadLabel: "frj_0xAE5E26FC3D55A871_public.asc",
   },
 ];

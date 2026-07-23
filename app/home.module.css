@@ -4,7 +4,16 @@
 
 .name {
   font-size: clamp(1.5rem, 4vw, 2.5rem);
-  margin-bottom: var(--spacing-lg);
+  margin-bottom: 0.5rem;
+}
+
+.tagline {
+  font-family: var(--font-mono);
+  font-size: 0.9em;
+  color: var(--text-muted);
+  max-width: 60ch;
+  margin: 0 auto var(--spacing-lg);
+  text-wrap: balance;
 }
 
 .contacts {
@@ -64,6 +73,40 @@
   max-width: 100%;
   margin-top: 0.25em;
   -webkit-overflow-scrolling: touch;
+}
+
+.pgpBlockLink {
+  display: block;
+  max-width: 100%;
+  position: relative;
+  text-decoration: none;
+  border-radius: 4px;
+}
+
+.pgpBlockLink::after {
+  content: "Download .asc";
+  position: absolute;
+  top: 0.35em;
+  right: 0.35em;
+  font-family: var(--font-mono);
+  font-size: 0.7em;
+  color: var(--text-muted);
+  background: var(--border-color);
+  padding: 0.2em 0.5em;
+  border-radius: 3px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.15s ease;
+}
+
+.pgpBlockLink:hover::after,
+.pgpBlockLink:focus-visible::after {
+  opacity: 1;
+}
+
+.pgpBlockLink:hover .pgpKey,
+.pgpBlockLink:focus-visible .pgpKey {
+  color: var(--text-muted);
 }
 
 .pgpKey {
