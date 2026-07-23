@@ -8,7 +8,7 @@ I'm walking through how I set up a CI/CD pipeline for this site. The repo lives 
 
 ## Before CI/CD
 
-The production stack was already a split setup. Next.js builds to a standalone server and runs under a user systemd unit on port 3000. Caddy runs in Docker and terminates TLS, then proxies to `host.docker.internal:3000`. That part worked fine. What did not scale was my deploy process: build somewhere, copy artifacts onto the VPS, restart systemd, and hope I remembered the static files.
+The production stack was already a split setup. Next.js builds to a standalone server and runs under a user systemd unit on port 3000. Caddy runs in Docker and terminates TLS, then proxies to `host.docker.internal:3000`. That part worked fine. What did not scale was my deploy process: build on my workstation, copy artifacts onto the VPS, restart systemd, and hope I remembered the static files.
 
 The site was also mid-rename from `t1566.com` to `frjgarcia.com`, so the CI work landed at the same time as updating domains, env vars, unit names, and Caddyfile hosts.
 
