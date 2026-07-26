@@ -10,7 +10,12 @@ export function Footer() {
         <p className={styles.hosted}>
           Self-hosted on{" "}
           <a href="https://www.debian.org/" target="_blank" rel="noreferrer">
-            Debian
+            Debian{" "}
+            <img
+              src="/images/etc/120px-Openlogo-debianV2.svg.png"
+              alt=""
+              className={styles.debianLogo}
+            />
           </a>
         </p>
       </div>

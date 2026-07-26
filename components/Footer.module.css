@@ -43,6 +43,13 @@
   color: var(--accent);
 }
 
+.debianLogo {
+  height: 1.1em;
+  width: auto;
+  vertical-align: text-bottom;
+  margin-left: 0.35em;
+}
+
 @media (max-width: 480px) {
   .footer {
     padding: var(--spacing-md) var(--spacing-sm);
