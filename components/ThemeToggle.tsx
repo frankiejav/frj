@@ -11,7 +11,7 @@ export function ThemeToggle() {
   useEffect(() => setMounted(true), []);
 
   const isDark = resolvedTheme === "dark";
-  const label = !mounted ? "[theme]" : isDark ? "[light]" : "[dark]";
+  const label = !mounted ? " " : isDark ? "[light]" : "[dark]";
 
   return (
     <button

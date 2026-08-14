@@ -34,6 +34,16 @@
   font-style: italic;
 }
 
+.heroImage {
+  display: block;
+  width: var(--content-width);
+  max-width: calc(100% - var(--spacing-lg));
+  max-height: 420px;
+  object-fit: cover;
+  margin: 0 auto var(--spacing-xl);
+  border: 1px solid var(--border-color);
+}
+
 .prose {
   width: var(--content-width);
   max-width: calc(100% - var(--spacing-lg));

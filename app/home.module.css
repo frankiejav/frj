@@ -1,18 +1,16 @@
 .home {
   text-align: center;
+  padding-block: var(--spacing-sm);
 }
 
 .name {
   font-size: clamp(1.5rem, 4vw, 2.5rem);
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.25rem;
 }
 
-.tagline {
-  font-family: var(--font-mono);
-  font-size: 0.9em;
-  color: var(--text-muted);
+.introLine {
   max-width: 60ch;
-  margin: 0 auto var(--spacing-lg);
+  margin: 0 auto var(--spacing-sm);
   text-wrap: balance;
 }
 
@@ -30,15 +28,9 @@
   display: flex;
   align-items: baseline;
   gap: 1em;
-  padding: 0.6em 0;
+  padding: 0.35em 0;
   border-bottom: 1px solid var(--border-color);
   margin: 0;
-}
-
-.pgpRow {
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 0.25em;
 }
 
 .label {
@@ -46,10 +38,6 @@
   font-family: var(--font-mono);
   font-size: 0.85em;
   color: var(--text-muted);
-}
-
-.pgpRow .label {
-  flex: none;
 }
 
 .contactLink {
@@ -68,58 +56,48 @@
   font-style: italic;
 }
 
-.pgpScroll {
-  overflow-x: auto;
-  max-width: 100%;
-  margin-top: 0.25em;
-  -webkit-overflow-scrolling: touch;
-}
-
-.pgpBlockLink {
-  display: block;
-  max-width: 100%;
-  position: relative;
-  text-decoration: none;
-  border-radius: 4px;
-}
-
-.pgpBlockLink::after {
-  content: "Download .asc";
-  position: absolute;
-  top: 0.35em;
-  right: 0.35em;
-  font-family: var(--font-mono);
-  font-size: 0.7em;
-  color: var(--text-muted);
-  background: var(--border-color);
-  padding: 0.2em 0.5em;
-  border-radius: 3px;
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.15s ease;
-}
-
-.pgpBlockLink:hover::after,
-.pgpBlockLink:focus-visible::after {
-  opacity: 1;
-}
-
-.pgpBlockLink:hover .pgpKey,
-.pgpBlockLink:focus-visible .pgpKey {
-  color: var(--text-muted);
-}
-
-.pgpKey {
-  font-family: var(--font-mono);
-  font-size: clamp(0.625rem, calc((100vw - 3rem) / 64), 0.8125rem);
-  color: var(--text-primary);
-  font-style: normal;
-  white-space: pre;
+.recent {
+  max-width: min(100%, calc(64ch + 5.5em));
+  margin: var(--spacing-xl) auto 0;
   text-align: left;
-  margin: 0;
-  padding: 0;
-  line-height: 1.45;
-  background: none;
-  border: none;
-  width: max-content;
 }
+
+.recentHeading {
+  font-family: var(--font-mono);
+  font-size: 0.85em;
+  font-weight: 400;
+  color: var(--text-muted);
+  margin-bottom: 0.25em;
+}
+
+.posts {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.posts li {
+  display: flex;
+  align-items: baseline;
+  gap: 1em;
+  padding: 0.35em 0;
+  border-bottom: 1px solid var(--border-color);
+  margin: 0;
+}
+
+.postDate {
+  flex: 0 0 12ch;
+  font-family: var(--font-mono);
+  font-size: 0.85em;
+  color: var(--text-muted);
+}
+
+.postLink {
+  color: var(--text-primary);
+}
+
+.postLink:visited,
+.postLink:hover {
+  color: var(--text-primary);
+}
+

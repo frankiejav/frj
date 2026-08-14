@@ -27,6 +27,10 @@
   font-family: var(--font-body);
 }
 
+.copyright {
+  margin-top: 0.65em !important;
+}
+
 .hosted {
   margin-top: 0.65em !important;
   font-family: var(--font-mono);

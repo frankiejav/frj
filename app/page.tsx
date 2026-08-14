@@ -1,21 +1,30 @@
+import Link from "next/link";
 import { contacts } from "@/data/contact";
+import { getPosts } from "@/lib/posts";
+import { FormattedDate } from "@/components/FormattedDate";
 import styles from "./home.module.css";
 
 export default function Home() {
+  const posts = getPosts().slice(0, 3);
+
   return (
-    <main className={styles.home}>
-      <h1 className={styles.name}>Francisco "Frankie" Garcia</h1>
-      <p className={styles.tagline}>
-        IT student with hands-on experience in information security, windows/linux systems,
-        and self-hosted infrastructure
-      </p>
+    <main className={`wide ${styles.home}`} id="content" tabIndex={-1}>
+      <div className={styles.top}>
+        <section className={styles.intro}>
+          <h1 className={styles.name}>
+            <strong>Francisco &ldquo;Frankie&rdquo; Garcia</strong>.
+          </h1>
+          <p className={styles.introLine}>
+            I&apos;m an <strong>IT student</strong> with hands-on experience in{" "}
+            <strong>information security</strong>,{" "}
+            <strong>Windows/Linux systems</strong>, and{" "}
+            <strong>self-hosted infrastructure</strong>.
+          </p>
+        </section>
 
       <ul className={styles.contacts}>
         {contacts.map((item) => (
-          <li
-            key={item.label}
-            className={item.preformatted ? styles.pgpRow : undefined}
-          >
+          <li key={item.label}>
             <span className={styles.label}>{item.label}</span>
             {item.href && item.value ? (
               <a
@@ -27,29 +36,31 @@ export default function Home() {
               >
                 {item.value}
               </a>
-            ) : item.preformatted && item.placeholder ? (
-              item.downloadHref ? (
-                <a
-                  className={styles.pgpBlockLink}
-                  href={item.downloadHref}
-                  download
-                  title={`Download ${item.downloadLabel ?? "key"}`}
-                >
-                  <div className={styles.pgpScroll}>
-                    <pre className={styles.pgpKey}>{item.placeholder}</pre>
-                  </div>
-                </a>
-              ) : (
-                <div className={styles.pgpScroll}>
-                  <pre className={styles.pgpKey}>{item.placeholder}</pre>
-                </div>
-              )
             ) : (
               <span className={styles.placeholder}>{item.placeholder}</span>
             )}
           </li>
         ))}
       </ul>
+      </div>
+
+      {posts.length > 0 && (
+        <section className={styles.recent}>
+          <h2 className={styles.recentHeading}>recent posts</h2>
+          <ul className={styles.posts}>
+            {posts.map((post) => (
+              <li key={post.slug}>
+                <span className={styles.postDate}>
+                  <FormattedDate date={post.pubDate} />
+                </span>
+                <Link href={post.permalink} className={styles.postLink}>
+                  {post.title}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </section>
+      )}
     </main>
   );
 }

@@ -7,9 +7,9 @@ export function Header() {
   return (
     <header className={styles.header}>
       <nav className={styles.nav}>
-        <h2 className={styles.brand}>
+        <span className={styles.brand}>
           <Link href="/">{SITE_TITLE}</Link>
-        </h2>
+        </span>
         <div className={styles.actions}>
           <Link href="/blog" className={styles.navLink}>
             [blog]

@@ -4,9 +4,6 @@ export interface ContactItem {
   value?: string;
   placeholder?: string;
   external?: boolean;
-  preformatted?: boolean;
-  downloadHref?: string;
-  downloadLabel?: string;
 }
 
 export const contacts: ContactItem[] = [
@@ -22,22 +19,9 @@ export const contacts: ContactItem[] = [
     external: true,
   },
   {
-    label: "PGP:",
-    placeholder: `-----BEGIN PGP PUBLIC KEY BLOCK-----
-
-mDMEaj1uMRYJKwYBBAHaRw8BAQdA74LzNK+TMS8kzCcbSQaXh7ihFRs0HIhg3w17
-UfmVh7+0FWZyaiA8ZkBmcmpnYXJjaWEuY29tPoiWBBMWCgA+FiEEQ/ugwiXuKjQy
-0hTgrl4m/D1VqHEFAmo9bjECGwMFCQWk3F8FCwkIBwIGFQoJCAsCBBYCAwECHgEC
-F4AACgkQrl4m/D1VqHFHTgEAw+XYtMS16PhXYypiYDSMC6f6aSJfcmSUWRPxx7YD
-69IA/3MDL6MM2gBg9w0YGMxVlqEpeWQep2nK0g0Ydn5t6jgHuDgEaj1uMRIKKwYB
-BAGXVQEFAQEHQKBm6Mg0sRVojZgjCWAXdRA+7Lm5hUiLcGPNQ0kCllwaAwEIB4h+
-BBgWCgAmFiEEQ/ugwiXuKjQy0hTgrl4m/D1VqHEFAmo9bjECGwwFCQWk3F8ACgkQ
-rl4m/D1VqHE46gD+LGrNwFCZWXxZhDunnxAdRdUNUA7fuS76krl5LAx18JQA/11R
-fyaddmz0+pKQixHfGgPq4XS+Z2tQ0Uz6+eGxwdIM
-=7VbC
------END PGP PUBLIC KEY BLOCK-----`,
-    preformatted: true,
-    downloadHref: "/frj_0xAE5E26FC3D55A871_public.asc",
-    downloadLabel: "frj_0xAE5E26FC3D55A871_public.asc",
+    label: "Telegram:",
+    href: "https://t.me/frrrrranke",
+    value: "t.me/frrrrranke",
+    external: true,
   },
 ];

@@ -48,6 +48,9 @@ export default function RootLayout({
     <html lang="en" className={literata.variable} suppressHydrationWarning>
       <body>
         <ThemeProvider>
+          <a href="#content" className="skip-link">
+            Skip to content
+          </a>
           <Header />
           {children}
           <Footer />

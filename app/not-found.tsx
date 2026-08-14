@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function NotFound() {
   return (
-    <main>
+    <main id="content" tabIndex={-1}>
       <section style={{ paddingBlock: "var(--spacing-xl)" }}>
         <p style={{ color: "var(--text-muted)", fontFamily: "var(--font-mono)" }}>
           404 · not found

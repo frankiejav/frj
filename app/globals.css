@@ -2,15 +2,15 @@
   --font-body: var(--font-literata), Georgia, serif;
   --font-display: var(--font-literata), Georgia, serif;
   --font-mono: ui-monospace, "SF Mono", "Cascadia Code", "Source Code Pro", Menlo, Consolas, monospace;
-  --accent: #5a5854;
-  --accent-light: #7a7874;
-  --accent-dark: #3a3836;
+  --accent: #3d6b52;
+  --accent-light: #57896d;
+  --accent-dark: #2c5240;
   --bg-primary: #f8f7f5;
   --bg-secondary: #eeedea;
   --bg-elevated: #fdfcfb;
   --text-primary: #1f1e1d;
   --text-secondary: #454442;
-  --text-muted: #8c8a86;
+  --text-muted: #6e6c67;
   --border-color: #d9d7d3;
   --shadow-color: rgba(0, 0, 0, 0.08);
   --code-bg: #ebe9e4;
@@ -26,15 +26,15 @@
 }
 
 [data-theme="dark"] {
-  --accent: #c4c1bc;
-  --accent-light: #d8d5d0;
-  --accent-dark: #a9a6a1;
+  --accent: #8fbc9f;
+  --accent-light: #a8d1b6;
+  --accent-dark: #79a88b;
   --bg-primary: #141413;
   --bg-secondary: #1c1b1a;
   --bg-elevated: #222120;
   --text-primary: #ebe9e6;
   --text-secondary: #c9c6c0;
-  --text-muted: #8a8780;
+  --text-muted: #9d9a93;
   --border-color: #3a3936;
   --shadow-color: rgba(0, 0, 0, 0.35);
   --code-bg: #1a1918;
@@ -68,7 +68,7 @@ body {
   word-wrap: break-word;
   overflow-wrap: break-word;
   color: var(--text-primary);
-  font-size: clamp(14px, 2vw, 17px);
+  font-size: clamp(16px, 2vw, 17px);
   line-height: 1.75;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -345,4 +345,21 @@ li {
   -webkit-clip-path: inset(50%);
   clip-path: inset(50%);
   white-space: nowrap;
+}
+
+.skip-link {
+  position: absolute;
+  top: -3.5em;
+  left: var(--spacing-sm);
+  z-index: 200;
+  padding: 0.5em 0.75em;
+  background: var(--bg-elevated);
+  border: 1px solid var(--accent);
+  color: var(--text-primary);
+  text-decoration: none;
+  transition: top 0.15s ease;
+}
+
+.skip-link:focus-visible {
+  top: var(--spacing-sm);
 }

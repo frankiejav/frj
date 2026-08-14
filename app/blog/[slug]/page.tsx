@@ -43,7 +43,7 @@ export default async function BlogPostPage({
   if (!post) notFound();
 
   return (
-    <main className="full">
+    <main className="full" id="content" tabIndex={-1}>
       <article>
         <section className={styles.hero}>
           <div className={styles.heroHeader}>
@@ -59,6 +59,9 @@ export default async function BlogPostPage({
             <h1>{post.title}</h1>
           </div>
         </section>
+        {post.heroImage && (
+          <img className={styles.heroImage} src={post.heroImage} alt="" />
+        )}
         <div
           className={`prose ${styles.prose}`}
           dangerouslySetInnerHTML={{ __html: post.body }}
