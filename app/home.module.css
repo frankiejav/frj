@@ -1,6 +1,6 @@
 .home {
   text-align: center;
-  padding-block: var(--spacing-sm);
+  padding: var(--spacing-md) 0 var(--spacing-sm);
 }
 
 .name {
@@ -28,7 +28,7 @@
   display: flex;
   align-items: baseline;
   gap: 1em;
-  padding: 0.35em 0;
+  padding: 0.25em 0;
   border-bottom: 1px solid var(--border-color);
   margin: 0;
 }
@@ -58,7 +58,7 @@
 
 .recent {
   max-width: min(100%, calc(64ch + 5.5em));
-  margin: var(--spacing-xl) auto 0;
+  margin: var(--spacing-lg) auto 0;
   text-align: left;
 }
 
@@ -80,7 +80,7 @@
   display: flex;
   align-items: baseline;
   gap: 1em;
-  padding: 0.35em 0;
+  padding: 0.25em 0;
   border-bottom: 1px solid var(--border-color);
   margin: 0;
 }
@@ -99,5 +99,25 @@
 .postLink:visited,
 .postLink:hover {
   color: var(--text-primary);
+}
+
+/* Tighten vertical rhythm on small screens so the page fits without scrolling */
+@media (max-width: 720px) {
+  .home {
+    padding-top: var(--spacing-md);
+  }
+
+  .name {
+    margin-bottom: 0.15rem;
+  }
+
+  .introLine {
+    margin-bottom: var(--spacing-sm);
+    line-height: 1.6;
+  }
+
+  .recent {
+    margin-top: var(--spacing-md);
+  }
 }
 
