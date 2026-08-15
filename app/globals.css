@@ -2,9 +2,9 @@
   --font-body: var(--font-literata), Georgia, serif;
   --font-display: var(--font-literata), Georgia, serif;
   --font-mono: ui-monospace, "SF Mono", "Cascadia Code", "Source Code Pro", Menlo, Consolas, monospace;
-  --accent: #3d6b52;
-  --accent-light: #57896d;
-  --accent-dark: #2c5240;
+  --accent: #e95420;
+  --accent-light: #f97e4f;
+  --accent-dark: #c7441a;
   --bg-primary: #f8f7f5;
   --bg-secondary: #eeedea;
   --bg-elevated: #fdfcfb;
@@ -26,9 +26,9 @@
 }
 
 [data-theme="dark"] {
-  --accent: #8fbc9f;
-  --accent-light: #a8d1b6;
-  --accent-dark: #79a88b;
+  --accent: #f4743b;
+  --accent-light: #ff9a6b;
+  --accent-dark: #e95420;
   --bg-primary: #141413;
   --bg-secondary: #1c1b1a;
   --bg-elevated: #222120;

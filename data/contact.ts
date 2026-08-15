@@ -15,13 +15,13 @@ export const contacts: ContactItem[] = [
   {
     label: "Signal:",
     href: "https://signal.me/#eu/mM7laZYAJKnoXLDts5ATiZCnk9ViSXy_iMLo2UCdbFDE-mHuj-RFWa1OiUgkPljC",
-    value: "signal.me/…",
+    value: "signal.me/#eu…",
     external: true,
   },
   {
     label: "Telegram:",
-    href: "https://t.me/frrrrranke",
-    value: "t.me/frrrrranke",
+    href: "https://t.me/fffrankie",
+    value: "t.me/fff…",
     external: true,
   },
 ];
