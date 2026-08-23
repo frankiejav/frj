@@ -2,7 +2,7 @@
 set -euo pipefail
 
 WORKSPACE="${GITHUB_WORKSPACE:-$(cd "$(dirname "$0")/.." && pwd)}"
-DEPLOY_DIR="${DEPLOY_DIR:-/home/nairobi/frjgarcia.com}"
+DEPLOY_DIR="${DEPLOY_DIR:-/home/frj/frjgarcia.com}"
 ENV_FILE="${ENV_FILE:-$DEPLOY_DIR/.env}"
 DEPLOY_COMPOSE_DIR="${DEPLOY_COMPOSE_DIR:-$DEPLOY_DIR/deploy}"
 

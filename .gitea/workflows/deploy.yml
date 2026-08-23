@@ -12,4 +12,4 @@ jobs:
       - uses: actions/checkout@v4
       - run: bash deploy/sync-and-restart.sh
         env:
-          DEPLOY_DIR: /home/nairobi/frjgarcia.com
+          DEPLOY_DIR: /home/frj/frjgarcia.com
