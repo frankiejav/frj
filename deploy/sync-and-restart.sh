@@ -28,7 +28,7 @@ cp "$WORKSPACE/deploy/Caddyfile" "$WORKSPACE/deploy/docker-compose.yml" "$WORKSP
 
 systemctl --user restart frjgarcia.service
 
-if docker compose -f "$DEPLOY_COMPOSE_DIR/docker-compose.yml" ps --status running -q caddy >/dev/null 2>&1; then
+if [[ -n "$(docker compose -f "$DEPLOY_COMPOSE_DIR/docker-compose.yml" ps --status running -q caddy 2>/dev/null)" ]]; then
   docker compose -f "$DEPLOY_COMPOSE_DIR/docker-compose.yml" exec -T caddy caddy reload --config /etc/caddy/Caddyfile
 else
   docker compose -f "$DEPLOY_COMPOSE_DIR/docker-compose.yml" up -d

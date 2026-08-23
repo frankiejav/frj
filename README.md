@@ -105,8 +105,8 @@ that builds on the prod runner and runs [`deploy/sync-and-restart.sh`](deploy/sy
 - **Manual deploy** — Gitea → Actions → Deploy → Run workflow
 - **PR checks** — `.gitea/workflows/ci.yml` runs `npm run build` on pull requests
 
-The live app directory on prod is `/home/nairobi/frjgarcia.com`. Environment
-variables live in `/home/nairobi/frjgarcia.com/.env` on the server only.
+The live app directory on prod is `/home/frj/frjgarcia.com`. Environment
+variables live in `/home/frj/frjgarcia.com/.env` on the server only.
 
 ### Running without Docker (local)
 
