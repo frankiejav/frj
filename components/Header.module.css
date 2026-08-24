@@ -5,7 +5,7 @@
   margin: 0;
   padding: 0 var(--spacing-sm);
   background: var(--bg-primary);
-  border-bottom: 2px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
 }
 
 .nav {
@@ -14,13 +14,15 @@
   justify-content: space-between;
   max-width: var(--content-width);
   margin: 0 auto;
-  padding: 0.6em 0;
+  padding: 0.7em 0;
   gap: 0.5em;
 }
 
 .brand {
   margin: 0;
-  font-size: clamp(1.25rem, 3vw, 1.75rem);
+  font-size: clamp(1rem, 2.5vw, 1.15rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
   flex-shrink: 0;
   font-family: var(--font-display);
 }
@@ -39,7 +41,7 @@
 .actions {
   display: flex;
   align-items: center;
-  gap: 0.35em;
+  gap: 0.75em;
   flex-shrink: 0;
 }
 
@@ -47,19 +49,25 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0.3em 0.5em;
-  border: 1px solid var(--border-color);
-  color: var(--text-muted);
-  font-size: 0.85em;
+  padding: 0.15em 0;
+  border: none;
+  border-bottom: 2px solid transparent;
+  color: var(--accent);
+  font-weight: 500;
+  font-size: 0.82em;
   text-decoration: none;
   white-space: nowrap;
   -webkit-tap-highlight-color: transparent;
 }
 
 .navLink:hover {
-  color: var(--accent);
-  border-color: var(--accent);
+  color: var(--accent-dark);
+  border-bottom-color: var(--accent);
   text-decoration: none;
+}
+
+[data-theme="dark"] .navLink:hover {
+  color: var(--accent-light);
 }
 
 @media (max-width: 480px) {
@@ -68,15 +76,14 @@
   }
 
   .nav {
-    padding: 0.4em 0;
+    padding: 0.5em 0;
   }
 
   .brand {
-    font-size: 1rem;
+    font-size: 0.95rem;
   }
 
   .navLink {
     font-size: 0.75em;
-    padding: 0.25em 0.4em;
   }
 }

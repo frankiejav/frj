@@ -1,13 +1,20 @@
 import type { Metadata } from "next";
-import { Literata } from "next/font/google";
+import { Bricolage_Grotesque, Libre_Franklin } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { SITE_TITLE, SITE_DESCRIPTION, SITE_URL, SITE_NAME } from "@/lib/consts";
 
-const literata = Literata({
-  variable: "--font-literata",
+const bricolage = Bricolage_Grotesque({
+  variable: "--font-bricolage",
+  subsets: ["latin"],
+  weight: ["400", "700", "800"],
+  display: "swap",
+});
+
+const franklin = Libre_Franklin({
+  variable: "--font-franklin",
   subsets: ["latin"],
   weight: ["400", "500", "600"],
   style: ["normal", "italic"],
@@ -45,7 +52,11 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" className={literata.variable} suppressHydrationWarning>
+    <html
+      lang="en"
+      className={`${bricolage.variable} ${franklin.variable}`}
+      suppressHydrationWarning
+    >
       <body>
         <ThemeProvider>
           <a href="#content" className="skip-link">

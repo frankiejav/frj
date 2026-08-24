@@ -1,26 +1,26 @@
 .home {
-  text-align: center;
-  padding: var(--spacing-md) 0 var(--spacing-sm);
+  text-align: left;
+  padding: var(--spacing-lg) 0 var(--spacing-sm);
 }
 
 .name {
-  font-size: clamp(1.5rem, 4vw, 2.5rem);
-  margin-bottom: 0.25rem;
+  font-size: clamp(2.25rem, 6vw, 3.5rem);
+  margin-bottom: 0.5rem;
 }
 
 .introLine {
-  max-width: 60ch;
-  margin: 0 auto var(--spacing-sm);
-  text-wrap: balance;
+  max-width: 32em;
+  margin: 0 0 var(--spacing-md);
+  text-wrap: pretty;
+  font-size: 1.05em;
 }
 
 .contacts {
   list-style: none;
   padding: 0;
-  margin: 0 auto;
-  display: inline-block;
+  margin: 0;
   text-align: left;
-  width: auto;
+  width: 100%;
   max-width: min(100%, calc(64ch + 5.5em));
 }
 
@@ -28,25 +28,38 @@
   display: flex;
   align-items: baseline;
   gap: 1em;
-  padding: 0.25em 0;
+  padding: 0.35em 0;
   border-bottom: 1px solid var(--border-color);
   margin: 0;
 }
 
 .label {
-  flex: 0 0 4.5em;
-  font-family: var(--font-mono);
-  font-size: 0.85em;
+  flex: 0 0 6em;
+  font-family: var(--font-body);
+  font-size: 0.7em;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
   color: var(--text-muted);
 }
 
 .contactLink {
-  color: var(--text-primary);
+  color: var(--accent);
+  font-weight: 500;
+  text-decoration: none;
 }
 
-.contactLink:visited,
+.contactLink:visited {
+  color: var(--accent);
+}
+
 .contactLink:hover {
-  color: var(--text-primary);
+  color: var(--accent-dark);
+  text-decoration: underline;
+}
+
+[data-theme="dark"] .contactLink:hover {
+  color: var(--accent-light);
 }
 
 .placeholder {
@@ -58,47 +71,60 @@
 
 .recent {
   max-width: min(100%, calc(64ch + 5.5em));
-  margin: var(--spacing-lg) auto 0;
+  margin: var(--spacing-xl) 0 0;
   text-align: left;
 }
 
 .recentHeading {
-  font-family: var(--font-mono);
-  font-size: 0.85em;
-  font-weight: 400;
+  font-family: var(--font-body);
+  font-size: 0.7em;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
   color: var(--text-muted);
-  margin-bottom: 0.25em;
+  margin-bottom: 0.6em;
 }
 
 .posts {
   list-style: none;
   padding: 0;
   margin: 0;
+  border-top: 2px solid var(--text-primary);
 }
 
 .posts li {
   display: flex;
   align-items: baseline;
-  gap: 1em;
-  padding: 0.25em 0;
+  gap: 1.15em;
+  padding: 0.75em 0;
   border-bottom: 1px solid var(--border-color);
   margin: 0;
 }
 
 .postDate {
   flex: 0 0 12ch;
-  font-family: var(--font-mono);
-  font-size: 0.85em;
+  font-family: var(--font-body);
+  font-size: 0.75em;
   color: var(--text-muted);
 }
 
 .postLink {
   color: var(--text-primary);
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.2em;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  text-decoration: none;
 }
 
-.postLink:visited,
-.postLink:hover {
+.postLink:visited {
   color: var(--text-primary);
+}
+
+.postLink:hover {
+  color: var(--accent);
+  text-decoration: none;
 }
 
 /* Tighten vertical rhythm on small screens so the page fits without scrolling */
@@ -108,16 +134,24 @@
   }
 
   .name {
-    margin-bottom: 0.15rem;
+    margin-bottom: 0.35rem;
   }
 
   .introLine {
     margin-bottom: var(--spacing-sm);
-    line-height: 1.6;
+    line-height: 1.55;
   }
 
   .recent {
-    margin-top: var(--spacing-md);
+    margin-top: var(--spacing-lg);
+  }
+
+  .posts li {
+    flex-direction: column;
+    gap: 0.25em;
+  }
+
+  .postDate {
+    flex: none;
   }
 }
-

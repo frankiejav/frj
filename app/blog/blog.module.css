@@ -1,21 +1,22 @@
 .intro {
-  margin-bottom: var(--spacing-xl);
+  margin-bottom: var(--spacing-lg);
 }
 
 .intro h1 {
-  margin-bottom: 0.25em;
+  margin-bottom: 0.15em;
 }
 
 .intro p {
-  color: var(--text-secondary);
-  max-width: 46ch;
-  font-size: clamp(1rem, 2.5vw, 1.15rem);
+  color: var(--text-muted);
+  max-width: 34em;
+  font-size: clamp(0.95rem, 2.5vw, 1.05rem);
+  text-wrap: pretty;
 }
 
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(min(300px, 100%), 1fr));
-  gap: clamp(1rem, 3vw, 2rem);
+  gap: clamp(1rem, 3vw, 1.5rem);
   list-style: none;
   margin: 0;
   padding: 0;
@@ -33,13 +34,13 @@
   overflow: hidden;
   background: var(--bg-elevated);
   border: 1px solid var(--border-color);
-  box-shadow: 3px 3px 0 var(--border-color);
-  transition: box-shadow 0.15s ease, border-color 0.15s ease;
+  box-shadow: none;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
 }
 
 .card:hover {
-  box-shadow: 4px 4px 0 var(--accent);
   border-color: var(--accent);
+  box-shadow: inset 0 2px 0 var(--accent);
   text-decoration: none;
 }
 
@@ -57,7 +58,7 @@
 }
 
 .cardBody {
-  padding: clamp(1em, 3vw, 1.25em);
+  padding: clamp(1.1em, 3vw, 1.35em);
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -65,15 +66,22 @@
 
 .cardTitle {
   margin: 0 0 0.5em 0;
-  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-family: var(--font-display);
+  font-size: clamp(1.25rem, 2.5vw, 1.4rem);
   color: var(--text-primary);
-  line-height: 1.2;
-  font-weight: 500;
+  line-height: 1.15;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.card:hover .cardTitle {
+  color: var(--accent);
 }
 
 .cardDesc {
   margin: 0 0 1em 0;
-  font-size: clamp(0.875em, 2vw, 0.95em);
+  font-size: clamp(0.85em, 2vw, 0.9em);
+  line-height: 1.5;
   color: var(--text-secondary);
   display: -webkit-box;
   -webkit-line-clamp: 3;
@@ -83,7 +91,7 @@
 }
 
 .cardDate {
-  font-size: 0.85em;
+  font-size: 0.75em;
   color: var(--text-muted);
 }
 

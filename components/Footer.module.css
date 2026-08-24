@@ -1,9 +1,9 @@
 .footer {
   padding: var(--spacing-lg) var(--spacing-sm);
-  background: var(--bg-secondary);
-  border-top: 2px solid var(--border-color);
+  background: var(--bg-primary);
+  border-top: 1px solid var(--border-color);
   color: var(--text-muted);
-  text-align: center;
+  text-align: left;
   margin-top: auto;
   flex-shrink: 0;
 }
@@ -14,7 +14,7 @@
 }
 
 .divider {
-  color: var(--text-muted);
+  color: var(--border-color);
   font-size: 0.85em;
   margin: 0 0 0.5em 0;
   letter-spacing: 0.5em;
@@ -22,29 +22,34 @@
 
 .footer p {
   margin: 0;
-  font-size: clamp(0.75em, 2vw, 0.85em);
+  font-size: clamp(0.75em, 2vw, 0.8em);
   color: var(--text-muted);
   font-family: var(--font-body);
 }
 
 .copyright {
-  margin-top: 0.65em !important;
+  margin-top: 0.5em !important;
 }
 
 .hosted {
-  margin-top: 0.65em !important;
-  font-family: var(--font-mono);
-  font-size: 0.72em !important;
+  margin-top: 0.4em !important;
+  font-size: 0.75em !important;
   letter-spacing: 0.02em;
 }
 
 .footer a,
 .footer a:visited {
-  color: var(--text-muted);
+  color: var(--accent);
+  text-decoration: none;
 }
 
 .footer a:hover {
-  color: var(--accent);
+  color: var(--accent-dark);
+  text-decoration: underline;
+}
+
+[data-theme="dark"] .footer a:hover {
+  color: var(--accent-light);
 }
 
 .debianLogo {
