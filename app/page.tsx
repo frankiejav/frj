@@ -13,12 +13,12 @@ export default function Home() {
         <section className={styles.intro}>
           <h1 className={styles.name}>
             <strong>Francisco &ldquo;Frankie&rdquo; Garcia</strong>.
-          </h1>
+         </h1>
           <p className={styles.introLine}>
             I&apos;m an <strong>IT student</strong> with hands-on experience in{" "}
-            <strong>information security</strong>,{" "}
-            <strong>Windows/Linux systems</strong>, and{" "}
-            <strong>self-hosted infrastructure</strong>.
+            <strong>Linux systems administration</strong>,{" "}
+            <strong>information security</strong>, and{" "}
+            <strong>network administration</strong>.
           </p>
         </section>
 
