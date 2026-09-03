@@ -7,13 +7,11 @@ export function Footer() {
     <footer className={styles.footer}>
       <div className={styles.content}>
         <p className={styles.divider}>* * *</p>
-        <p className={styles.copyright}>
-          © {year} {SITE_NAME} · <a href="/rss.xml">rss</a>
-        </p>
         <p className={styles.hosted}>
-          Self-hosted on{" "}
+          <a href="/rss.xml">rss</a>  · 
+          self-hosted on {" "}
           <a href="https://www.debian.org/" target="_blank" rel="noreferrer">
-            Debian{" "}
+            debian{" "}
             <img
               src="/images/etc/120px-Openlogo-debianV2.svg.png"
               alt=""
