@@ -6,10 +6,4 @@ export interface ContactItem {
   external?: boolean;
 }
 
-export const contacts: ContactItem[] = [
-  {
-    label: "Email:",
-    href: "mailto:contact@frjgarcia.com",
-    value: "contact@frjgarcia.com",
-  }
-];
+export const contacts: ContactItem[] = [];

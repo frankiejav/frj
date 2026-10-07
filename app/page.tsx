@@ -2,6 +2,7 @@ import Link from "next/link";
 import { contacts } from "@/data/contact";
 import { getPosts } from "@/lib/posts";
 import { FormattedDate } from "@/components/FormattedDate";
+import { ObfuscatedEmail } from "@/components/ObfuscatedEmail";
 import styles from "./home.module.css";
 
 export default function Home() {
@@ -41,6 +42,10 @@ export default function Home() {
             )}
           </li>
         ))}
+        <li>
+          <span className={styles.label}>Email:</span>
+          <ObfuscatedEmail />
+        </li>
       </ul>
       </div>
 
